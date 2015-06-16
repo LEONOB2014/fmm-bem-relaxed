@@ -1,0 +1,14 @@
+In file included from StokesBEM.cpp:16:0:
+./BEM/LocalPC_Stokes.hpp: In constructor ‘Preconditioners::LocalInnerSolver<Plan>::LocalInnerSolver(Kernel, SourceVector&)’:
+./BEM/LocalPC_Stokes.hpp:49:48: error: ‘RHS’ was not declared in this scope
+StokesBEM.cpp: In function ‘int main(int, char**)’:
+StokesBEM.cpp:202:82: error: no matching function for call to ‘Preconditioners::LocalInnerSolver<FMM_plan<StokesSphericalBEM> >::LocalInnerSolver(kernel_type&, std::vector<StokesSphericalBEM::Panel>&, std::vector<fixed_vector<double, 3ul> >&)’
+StokesBEM.cpp:202:82: note: candidates are:
+In file included from StokesBEM.cpp:16:0:
+./BEM/LocalPC_Stokes.hpp:48:3: note: template<class Kernel, class SourceVector, class ResultVector> Preconditioners::LocalInnerSolver::LocalInnerSolver(Kernel, SourceVector&)
+./BEM/LocalPC_Stokes.hpp:48:3: note:   template argument deduction/substitution failed:
+StokesBEM.cpp:202:82: note:   candidate expects 2 arguments, 3 provided
+In file included from StokesBEM.cpp:16:0:
+./BEM/LocalPC_Stokes.hpp:26:7: note: Preconditioners::LocalInnerSolver<FMM_plan<StokesSphericalBEM> >::LocalInnerSolver(const Preconditioners::LocalInnerSolver<FMM_plan<StokesSphericalBEM> >&)
+./BEM/LocalPC_Stokes.hpp:26:7: note:   candidate expects 1 argument, 3 provided
+make: *** [StokesBEM.o] Error 1

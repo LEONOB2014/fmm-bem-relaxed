@@ -1,0 +1,28 @@
+[W]: Unknown command line arg: "-ncrit"
+[W]: Unknown command line arg: "150"
+[W]: Unknown command line arg: "-lazy_eval"
+initialised 128 triangles
+Flipping BC: 3.09944e-06
+Creating plan: 0.0227058
+P2P: 0.000175s, M2L (0): 1.907e-06s
+Executing plan: 0.000279903
+1st-kind equation being solved
+Solver: GMRES
+Preconditioner: Identity
+P2P: 0.000175s, M2L (0): 9.537e-07s
+P2P: 0.0001822s, M2L (0): 9.537e-07s
+it: 001, res: 2.590e-03, fmm_req_p: 10
+P2P: 0.000181s, M2L (0): 9.537e-07s
+it: 002, res: 7.199e-04, fmm_req_p: 6
+P2P: 0.00018s, M2L (0): 0s
+it: 003, res: 1.268e-04, fmm_req_p: 5
+P2P: 0.0001812s, M2L (0): 9.537e-07s
+Final residual: 5.8772e-06, after 4 iterations
+
+TIMING:
+	setup : 2.3028e-02s
+	solve : 4.9760e-03s
+norm: 0.19245
+result1: 2.336, result2: -6.714e-07
+external phi: 0.18589, exact: 0.19245
+error: 3.948e-02

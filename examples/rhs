@@ -1,0 +1,51 @@
+initialised 128 triangles
+generating RHS
+P2P: 0.001262s, M2L (0): 9.537e-07s
+done
+Solver: GMRES, Preconditioner: Identity
+P2P: 0.00126s, M2L (0): 1.192e-06s
+P2P: 0.001259s, M2L (0): 1.192e-06s
+it: 001, res: 1.397e-02, fmm_req_p: 12
+P2P: 0.001321s, M2L (0): 9.537e-07s
+it: 002, res: 3.197e-03, fmm_req_p: 8
+P2P: 0.00133s, M2L (0): 9.537e-07s
+it: 003, res: 2.430e-03, fmm_req_p: 6
+P2P: 0.00133s, M2L (0): 1.192e-06s
+it: 004, res: 1.147e-03, fmm_req_p: 6
+P2P: 0.001336s, M2L (0): 9.537e-07s
+it: 005, res: 5.203e-04, fmm_req_p: 5
+P2P: 0.001341s, M2L (0): 0s
+it: 006, res: 1.762e-04, fmm_req_p: 5
+P2P: 0.001347s, M2L (0): 9.537e-07s
+it: 007, res: 1.263e-04, fmm_req_p: 5
+P2P: 0.00134s, M2L (0): 0s
+it: 008, res: 6.450e-05, fmm_req_p: 5
+P2P: 0.00134s, M2L (0): 9.537e-07s
+it: 009, res: 2.841e-05, fmm_req_p: 5
+P2P: 0.001334s, M2L (0): 9.537e-07s
+it: 010, res: 1.126e-05, fmm_req_p: 5
+P2P: 0.001328s, M2L (0): 9.537e-07s
+Final residual: 7.4100e-06, after 11 iterations
+
+TIMING:
+	setup : 2.8852e-02s
+	solve : 2.0425e-02s
+
+t_exact : -0.0015
+
+
+Fx: 0.01527, analytical: -0.01885
+Fy: 0.0001056, Fz: 0.0001057
+error: 1.81036e+00
+
+
+	drag error per panel : 1.41434e-02, average panel area: 9.33976e-02
+	Area error : 4.86600e-02
+
+
+POINTWISE ERRORS
+	error: 1.080e+00
+
+Totals:
+	Stokeslet (0,0), (0,0), (0,0), (0,0)
+	Stresslet (0,0), (0,0), (0,0), (0,0)

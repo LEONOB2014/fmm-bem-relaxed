@@ -1,0 +1,3 @@
+State      Recv-Q Send-Q      Local Address:Port          Peer Address:Port   
+ESTAB      0      0          128.197.179.44:45552       173.194.68.125:https   
+ESTAB      0      0          128.197.179.44:56176        173.194.43.33:https   

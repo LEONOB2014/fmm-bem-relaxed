@@ -1,0 +1,357 @@
+In file included from /usr/local/include/boost/numeric/ublas/storage.hpp:26:0,
+                 from /usr/local/include/boost/numeric/ublas/vector.hpp:19,
+                 from ../include/Vec.hpp:12,
+                 from ../include/FMM_plan.hpp:4,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/traits.hpp: In instantiation of ‘const size_t boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::size’:
+/usr/local/include/boost/numeric/ublas/traits.hpp:70:67:   required from ‘const size_t boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::index’
+/usr/local/include/boost/numeric/ublas/traits.hpp:72:53:   required from ‘struct boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >’
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3691:63:   required from ‘struct boost::numeric::ublas::matrix_vector_binary1_traits<Mat3<double>, boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >, fixed_vector<double, 3ul>, boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > > >’
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5:   required by substitution of ‘template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&) [with E1 = boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >; E2 = boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >]’
+../include/executor/EvalDiagonalSparse.hpp:60:64:   required from ‘void EvalDiagonalSparse<Context>::execute(Context&) const [with Context = ExecutorSingleTree<StokesSphericalBEM, Octree<fixed_vector<double, 3ul> > >]’
+StokesBEM.cpp:167:1:   required from here
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: error: no match for ‘operator+’ in ‘boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::x + boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::y’
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note: candidates are:
+In file included from ../kernel/StokesSpherical.hpp:8:0,
+                 from ../kernel/StokesSphericalBEM.hpp:3,
+                 from StokesBEM.cpp:6:
+../include/Mat3.hpp:54:11: note: Mat3<T> Mat3<T>::operator+(const Mat3<T>&) [with T = double]
+../include/Mat3.hpp:54:11: note:   no known conversion for argument 1 from ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::y_type {aka fixed_vector<double, 3ul>}’ to ‘const Mat3<double>&’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:2478:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_binary_traits<E1, E2, boost::numeric::ublas::scalar_plus<typename E1::value_type, typename E2::value_type> >::result_type boost::numeric::ublas::operator+(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:2478:5: note:   template argument deduction/substitution failed:
+In file included from /usr/local/include/boost/numeric/ublas/storage.hpp:26:0,
+                 from /usr/local/include/boost/numeric/ublas/vector.hpp:19,
+                 from ../include/Vec.hpp:12,
+                 from ../include/FMM_plan.hpp:4,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note:   ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::x_type {aka Mat3<double>}’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E1>’
+In file included from /usr/local/include/boost/numeric/ublas/vector.hpp:20:0,
+                 from ../include/Vec.hpp:12,
+                 from ../include/FMM_plan.hpp:4,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/vector_expression.hpp:910:5: note: template<class E1, class E2> typename boost::numeric::ublas::vector_binary_traits<E1, E2, boost::numeric::ublas::scalar_plus<typename E1::value_type, typename E2::value_type> >::result_type boost::numeric::ublas::operator+(const boost::numeric::ublas::vector_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/vector_expression.hpp:910:5: note:   template argument deduction/substitution failed:
+In file included from /usr/local/include/boost/numeric/ublas/storage.hpp:26:0,
+                 from /usr/local/include/boost/numeric/ublas/vector.hpp:19,
+                 from ../include/Vec.hpp:12,
+                 from ../include/FMM_plan.hpp:4,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note:   ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::x_type {aka Mat3<double>}’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+/usr/local/include/boost/numeric/ublas/traits.hpp:92:40: note: template<class R, class I> typename boost::enable_if<boost::mpl::and_<boost::is_float<R>, boost::is_integral<I> >, std::complex<_Tp> >::type boost::numeric::ublas::operator+(const std::complex<_Tp>&, I)
+/usr/local/include/boost/numeric/ublas/traits.hpp:92:40: note:   template argument deduction/substitution failed:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note:   ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::x_type {aka Mat3<double>}’ is not derived from ‘const std::complex<_Tp>’
+/usr/local/include/boost/numeric/ublas/traits.hpp:82:40: note: template<class R, class I> typename boost::enable_if<boost::mpl::and_<boost::is_float<R>, boost::is_integral<I> >, std::complex<_Tp> >::type boost::numeric::ublas::operator+(I, const std::complex<_Tp>&)
+/usr/local/include/boost/numeric/ublas/traits.hpp:82:40: note:   template argument deduction/substitution failed:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note:   ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::y_type {aka fixed_vector<double, 3ul>}’ is not derived from ‘const std::complex<_Tp>’
+In file included from ../include/FMM_plan.hpp:4:0,
+                 from StokesBEM.cpp:5:
+../include/Vec.hpp:366:1: note: template<class E1, class T2> typename boost::enable_if<boost::is_convertible<typename E1::value_type, T2>, typename boost::numeric::ublas::vector_binary_scalar2_traits<E1, const T2, boost::numeric::ublas::scalar_plus<typename E1::value_type, T2> >::result_type>::type operator+(const boost::numeric::ublas::vector_expression<E1>&, const T2&)
+../include/Vec.hpp:366:1: note:   template argument deduction/substitution failed:
+In file included from /usr/local/include/boost/numeric/ublas/storage.hpp:26:0,
+                 from /usr/local/include/boost/numeric/ublas/vector.hpp:19,
+                 from ../include/Vec.hpp:12,
+                 from ../include/FMM_plan.hpp:4,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13: note:   ‘boost::numeric::ublas::type_deduction_detail::base_result_of<Mat3<double>, fixed_vector<double, 3ul> >::x_type {aka Mat3<double>}’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+In file included from ../include/FMM_plan.hpp:4:0,
+                 from StokesBEM.cpp:5:
+../include/Vec.hpp:349:1: note: template<class T1, class E2> typename boost::enable_if<boost::is_convertible<T1, typename E2::value_type>, typename boost::numeric::ublas::vector_binary_scalar1_traits<const T1, E2, boost::numeric::ublas::scalar_plus<T1, typename E2::value_type> >::result_type>::type operator+(const T1&, const boost::numeric::ublas::vector_expression<E2>&)
+../include/Vec.hpp:349:1: note:   template argument deduction/substitution failed:
+../include/Vec.hpp: In substitution of ‘template<class T1, class E2> typename boost::enable_if<boost::is_convertible<T1, typename E2::value_type>, typename boost::numeric::ublas::vector_binary_scalar1_traits<const T1, E2, boost::numeric::ublas::scalar_plus<T1, typename E2::value_type> >::result_type>::type operator+(const T1&, const boost::numeric::ublas::vector_expression<E2>&) [with T1 = Mat3<double>; E2 = boost::numeric::ublas::vector<double, fixed_array<double, 3ul, std::allocator<double> > >]’:
+/usr/local/include/boost/numeric/ublas/traits.hpp:68:13:   required from ‘const size_t boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::size’
+/usr/local/include/boost/numeric/ublas/traits.hpp:70:67:   required from ‘const size_t boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >::index’
+/usr/local/include/boost/numeric/ublas/traits.hpp:72:53:   required from ‘struct boost::numeric::ublas::promote_traits<Mat3<double>, fixed_vector<double, 3ul> >’
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3691:63:   required from ‘struct boost::numeric::ublas::matrix_vector_binary1_traits<Mat3<double>, boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >, fixed_vector<double, 3ul>, boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > > >’
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5:   required by substitution of ‘template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&) [with E1 = boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >; E2 = boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >]’
+../include/executor/EvalDiagonalSparse.hpp:60:64:   required from ‘void EvalDiagonalSparse<Context>::execute(Context&) const [with Context = ExecutorSingleTree<StokesSphericalBEM, Octree<fixed_vector<double, 3ul> > >]’
+StokesBEM.cpp:167:1:   required from here
+../include/Vec.hpp:349:1: error: no type named ‘type’ in ‘struct boost::enable_if<boost::is_convertible<Mat3<double>, double>, boost::numeric::ublas::vector_binary_scalar1<const Mat3<double>, boost::numeric::ublas::vector<double, fixed_array<double, 3ul, std::allocator<double> > >, boost::numeric::ublas::scalar_plus<Mat3<double>, double> > >’
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp: In instantiation of ‘void EvalDiagonalSparse<Context>::execute(Context&) const [with Context = ExecutorSingleTree<StokesSphericalBEM, Octree<fixed_vector<double, 3ul> > >]’:
+StokesBEM.cpp:167:1:   required from here
+../include/executor/EvalDiagonalSparse.hpp:60:64: error: no matching function for call to ‘prod(const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >&, boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >&)’
+../include/executor/EvalDiagonalSparse.hpp:60:64: note: candidates are:
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3704:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::row_major_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3704:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   candidate expects 4 arguments, 2 provided
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5: note:   substitution of deduced template arguments resulted in errors seen above
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3759:5: note: template<class V, class E1, class E2> V& boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E>&, V&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3759:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   candidate expects 3 arguments, 2 provided
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3777:5: note: template<class V, class E1, class E2> V boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3777:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   couldn't deduce template parameter ‘V’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4094:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary2_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::column_major_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4094:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4108:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary2_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4108:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4149:5: note: template<class V, class E1, class E2> V& boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E2>&, const boost::numeric::ublas::matrix_expression<E2>&, V&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4149:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4167:5: note: template<class V, class E1, class E2> V boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E2>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4167:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4799:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_matrix_binary_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::unknown_orientation_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4799:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4813:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_matrix_binary_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4813:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4854:5: note: template<class M, class E1, class E2> M& boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, M&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4854:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4872:5: note: template<class M, class E1, class E2> M boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4872:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:14:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalDiagonalSparse.hpp:60:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp: In instantiation of ‘void EvalLocalSparse<Context>::execute(Context&) const [with Context = ExecutorSingleTree<StokesSphericalBEM, Octree<fixed_vector<double, 3ul> > >]’:
+StokesBEM.cpp:167:1:   required from here
+../include/executor/EvalLocalSparse.hpp:98:64: error: no matching function for call to ‘prod(const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >&, boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >&)’
+../include/executor/EvalLocalSparse.hpp:98:64: note: candidates are:
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3704:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::row_major_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3704:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   candidate expects 4 arguments, 2 provided
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary1_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3718:5: note:   template argument deduction/substitution failed:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3759:5: note: template<class V, class E1, class E2> V& boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E>&, V&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3759:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   candidate expects 3 arguments, 2 provided
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3777:5: note: template<class V, class E1, class E2> V boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::vector_expression<E>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:3777:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   couldn't deduce template parameter ‘V’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4094:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary2_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::column_major_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4094:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4108:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_vector_binary2_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4108:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E1>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4149:5: note: template<class V, class E1, class E2> V& boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E2>&, const boost::numeric::ublas::matrix_expression<E2>&, V&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4149:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4167:5: note: template<class V, class E1, class E2> V boost::numeric::ublas::prod(const boost::numeric::ublas::vector_expression<E2>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4167:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘const boost::numeric::ublas::compressed_matrix<Mat3<double>, boost::numeric::ublas::basic_row_major<>, 0ul, boost::numeric::ublas::unbounded_array<long unsigned int>, boost::numeric::ublas::unbounded_array<Mat3<double>, std::allocator<Mat3<double> > > >’ is not derived from ‘const boost::numeric::ublas::vector_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4799:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_matrix_binary_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, boost::numeric::ublas::unknown_storage_tag, boost::numeric::ublas::unknown_orientation_tag)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4799:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4813:5: note: template<class E1, class E2> typename boost::numeric::ublas::matrix_matrix_binary_traits<typename E1::value_type, E1, typename E2::value_type, E2>::result_type boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4813:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4854:5: note: template<class M, class E1, class E2> M& boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&, M&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4854:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+In file included from /usr/local/include/boost/numeric/ublas/matrix_sparse.hpp:17:0,
+                 from ../include/executor/EvalP2P.hpp:4,
+                 from ../include/executor/EvalLocalSparse.hpp:4,
+                 from ../include/executor/make_executor.hpp:13,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4872:5: note: template<class M, class E1, class E2> M boost::numeric::ublas::prod(const boost::numeric::ublas::matrix_expression<E1>&, const boost::numeric::ublas::matrix_expression<E2>&)
+/usr/local/include/boost/numeric/ublas/matrix_expression.hpp:4872:5: note:   template argument deduction/substitution failed:
+In file included from ../include/executor/make_executor.hpp:13:0,
+                 from ../include/FMM_plan.hpp:10,
+                 from StokesBEM.cpp:5:
+../include/executor/EvalLocalSparse.hpp:98:64: note:   ‘boost::numeric::ublas::vector<fixed_vector<double, 3ul>, boost::numeric::ublas::unbounded_array<fixed_vector<double, 3ul>, std::allocator<fixed_vector<double, 3ul> > > >’ is not derived from ‘const boost::numeric::ublas::matrix_expression<E2>’
+make: *** [StokesBEM.o] Error 1
